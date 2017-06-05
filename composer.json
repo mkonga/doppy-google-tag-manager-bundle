@@ -1,0 +1,25 @@
+{
+    "name"       : "doppy/google-tag-manager-bundle",
+    "type"       : "symfony-bundle",
+    "description": "Doppy's Google Tag Manager bundle",
+    "keywords"   : [
+        "tree",
+        "symfony"
+    ],
+    "license"    : "MIT",
+    "authors"    : [
+        {
+            "name" : "Daan van den Berg",
+            "email": "zawadi@doppy.nl"
+        }
+    ],
+    "require"    : {
+        "php"                     : "^5.6|^7.0",
+        "symfony/symfony"         : "^3.0"
+    },
+    "autoload"   : {
+        "psr-4": {
+            "Doppy\\GoogleTagManagerBundle\\": ""
+        }
+    }
+}
