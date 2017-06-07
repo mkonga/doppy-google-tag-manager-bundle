@@ -24,8 +24,8 @@ class Configuration implements ConfigurationInterface
             ->addDefaultsIfNotSet()
             ->children()
                 ->booleanNode('enabled')->defaultValue(true)->end()
-                ->booleanNode('debug')->defaultValue(false)->end()
-                ->scalarNode('tag_id')->required(true)->end()
+                ->booleanNode('test')->defaultValue(false)->end()
+                ->scalarNode('tag_id')->isRequired(true)->end()
             ->end();
 
         return $treeBuilder;

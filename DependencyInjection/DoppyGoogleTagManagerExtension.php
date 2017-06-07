@@ -23,16 +23,11 @@ class DoppyGoogleTagManagerExtension extends Extension
         $config        = $this->processConfiguration($configuration, $configs);
 
 
-        $container->setParameter('doppy_gtm.enabled', $config['enabled']);
-        $container->setParameter('doppy_gtm.debug', $config['debug']);
-        $container->setParameter('doppy_gtm.tag_id', $config['tag_id']);
+        $container->setParameter('doppy_google_tag_manager.enabled', $config['enabled']);
+        $container->setParameter('doppy_google_tag_manager.test', $config['test']);
+        $container->setParameter('doppy_google_tag_manager.tag_id', $config['tag_id']);
 
         $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));
         $loader->load('services.yml');
-    }
-
-    public function getAlias()
-    {
-        return 'doppy_gtm';
     }
 }

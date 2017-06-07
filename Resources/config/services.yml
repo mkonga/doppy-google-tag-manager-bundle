@@ -1,1 +1,20 @@
 services:
+    doppy_google_tag_manager.serializer:
+        class: Symfony\Component\Serializer\Serializer
+        arguments:
+            - []
+            - [ "@doppy_google_tag_manager.json_encoder" ]
+
+    doppy_google_tag_manager.json_encoder:
+        class: Symfony\Component\Serializer\Encoder\JsonEncode
+        public: false
+
+    doppy_google_tag_manager.twig_extension:
+        class: Doppy\GoogleTagManagerBundle\Twig\GoogleTagManagerExtension
+        arguments:
+            - "@doppy_google_tag_manager.serializer"
+            - "%doppy_google_tag_manager.tag_id%"
+            - "%doppy_google_tag_manager.enabled%"
+            - "%doppy_google_tag_manager.test%"
+        tags:
+            - { name: "twig.extension" }
