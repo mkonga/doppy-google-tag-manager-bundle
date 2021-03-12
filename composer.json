@@ -1,6 +1,7 @@
 {
     "name"       : "doppy/google-tag-manager-bundle",
     "type"       : "symfony-bundle",
+    "abandoned"  : true,
     "description": "Doppy's Google Tag Manager bundle",
     "keywords"   : [
         "google tag manager",
